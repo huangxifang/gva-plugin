@@ -11,6 +11,12 @@
         RequestPrams map[string]interface{} //短信参数
     }
 
+## 安装阿里云短信SDK
+```bash
+go get github.com/alibabacloud-go/darabonba-openapi/client
+go get github.com/alibabacloud-go/dysmsapi-20170525/v2
+```
+
 ## 引用仓库
 在`server/initialize/plugin.go` 文件内引用
 
@@ -46,11 +52,11 @@ Content-Type: application/json
 参数：
 ```json
 {
-    SmsType: "sign",
-    Mobile: "xxxxx",
-    RequestPrams:{
-        "code":"581111"
-    }
+  SmsType: "sign",
+  Mobile: "xxxxx",
+  RequestPrams:{
+    "code":"581111"
+  }
 }
 ```
 
