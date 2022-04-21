@@ -6,8 +6,9 @@
     注册验证码： /dysms/smsCode [post] 已配置swagger
     入参：
     type SmsRequest struct {
-        SmsType      string //register 注册 sign身份验证
-        Mobile       string //手机
+        SmsType      string                 //类型 register注册 sign身份验证
+        Mobile       string                 //手机
+        RequestPrams map[string]interface{} //短信参数
     }
 
 ## 引用仓库
@@ -36,3 +37,21 @@ func InstallPlugin(PublicGroup *gin.RouterGroup, PrivateGroup *gin.RouterGroup) 
 }
 
 ```
+
+## 请求举例
+请求地址：/dysms/smsCode
+
+Method：POST
+Content-Type: application/json
+参数：
+```json
+{
+    SmsType: "sign",
+    Mobile: "xxxxx",
+    RequestPrams:{
+        "code":"581111"
+    }
+}
+```
+
+
