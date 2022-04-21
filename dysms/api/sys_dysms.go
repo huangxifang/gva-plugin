@@ -12,14 +12,13 @@ import (
 
 type DysmsApi struct{}
 
-//注册验证码
-func (s *DysmsApi) Register(c *gin.Context) {
+//注册-身份验证 - 短信验证码
+func (s *DysmsApi) SmsCode(c *gin.Context) {
 	var sendCode model.SmsRequest
 	_ = c.ShouldBindJSON(&sendCode)
 	if sendCode.SmsType == "" {
 		sendCode.SmsType = "register"
 	}
-
 	var requestPrams = make(map[string]interface{})
 	code := base64Captcha.RandText(6, "0123456789")
 	requestPrams["code"] = code

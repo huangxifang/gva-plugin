@@ -11,6 +11,6 @@ func (s *DysmsRouter) InitDysmsRouter(Router *gin.RouterGroup) {
 	dysmsRouter := Router
 	DysmsApi := api.ApiGroupApp.DysmsApi
 	{
-		dysmsRouter.POST("register", DysmsApi.Register) // 注册短信验证码
+		dysmsRouter.POST("smsCode", DysmsApi.SmsCode) // 注册-身份验证短信验证码
 	}
 }
