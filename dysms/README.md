@@ -48,7 +48,9 @@ func InstallPlugin(PublicGroup *gin.RouterGroup, PrivateGroup *gin.RouterGroup) 
 请求地址：/dysms/smsCode
 
 Method：POST
+
 Content-Type: application/json
+
 参数：
 ```json
 {
