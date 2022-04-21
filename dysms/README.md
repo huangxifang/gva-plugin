@@ -3,12 +3,12 @@
 -----------------------------------------------
 
 本插件用于注册验证码、身份验证码，短信通知
-1. 使用场景
+## 1. 使用场景
 - 注册会员
 - 修改密码，身份验证
 - 会员消息通知
 
-2. 配置说明
+## 2. 配置说明
 
 在gin-vue-admin 主程序的initialize中的plugin的InstallPlugin 函数中写入如下代码
 ```go
@@ -59,7 +59,7 @@ dysms: {}
 ```
 
 
-3. 参数说明
+## 3. 参数说明
 ```go
 type SmsRequest struct {
     SmsType      string                 //类型 register注册 sign身份验证
@@ -68,13 +68,13 @@ type SmsRequest struct {
 }
 ```
 
-4. 方法API（可调用方法）
+## 4. 方法API（可调用方法）
 ```go
 var info model.SmsRequest
 utils.Send(info)
 ```
 
-5. 可调用接口
+## 5. 可调用接口
 
 
     接口： /dysms/smsCode [post] 
@@ -96,7 +96,7 @@ go get github.com/alibabacloud-go/dysmsapi-20170525/v2
 
 ```go
 import (
-    "github.com/huangxifang/gva-plugin/dysms"
+"github.com/huangxifang/gva-plugin/dysms"
 )
 
 ```
